@@ -1,58 +1,164 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Dining Dash",
+    "Credits": "Created by Marina Uriostegui",
+    "InitialLocation": "Patio",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Patio": {
+            "Body": "You wake up dazed and confused as you lift your face from the cold metal table. Looking around you realize that you are outside on a patio with the full moon staring back at you. You notice an emergency exit around the corner and a door that appears to lead inside. What will you do?\n\n",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "[ Open the emergency exit ]",
+                    "Target": "BadEnding"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "[ Open the door leading inside ]",
+                    "Target": "Dining"
                 }
-            ]
+            ],
+            "Flag": false,
+            "Body2": "You’ve been here before and you know the only option you’ve got is to go back inside. Tough luck bud, maybe don’t fall asleep outside next time."
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "BadEnding": {
+            "Body": "You open the door and an ear splitting alarm starts going off. Almost immediately you see someone start yelling at you to stay where you are. You are charged with breaking and entering and will have to face administrative consequences. What if we had gone inside instead?\n\n"
+        },
+        "Dining": {
+            "Body": "You notice that you are on the second floor of what appears to be the Cowell/Stevenson Dining Hall with the view being the thing that distinguishes it the most. With that realization, you know that opening the emergency exit would’ve sounded the loudest alarm known to mankind.\nYou head inside into what you recognize as the dining hall with the cafeteria-esque tables and chairs. As soon as you stumble around a bit, the dining hall lights up. What will you do?\n\n",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "[ Go to the kitchen ]",
+                    "Target": "Kitchen"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "[ Go toward the exit ]",
+                    "Target": "Exit"
+                },
+                {
+                    "Text": "[ Go to the cashier area ]",
+                    "Target": "Walkies"
+                },
+                {
+                    "Text": "[ Go to the patio ]",
+                    "Target": "Patio"
                 }
-            ]
+            ],
+            "Flag": false,
+            "Body2": "The cafeteria-esque tables and chairs will always stay the same, you fear."
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Kitchen": {
+            "Body": "You head to the kitchen where you start checking the hot boxes for a late night snack. Sadly, you find nothing but thin metal trays staring back at you.\n\n",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "[ Go to the dish area ]",
+                    "Target": "Dish"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "[ Go to the dry storage ]",
+                    "Target": "Dry Storage"
+                },
+                {
+                    "Text": "[ Go to the manager’s office ]",
+                    "Target": "Manager"
+                },
+                {
+                    "Text": "[ Go to the dining area ]",
+                    "Target": "Dining"                
+                }
+            ],
+            "Flag": false,
+            "Body2": "The central hub of this whole operation. Makes you wonder what it's like working back here and if you would ever consider joining."
+        },
+        "Walkies": {
+            "Body": "You head towards the area where students normally welcome you in and wish you a good day on the way out. You peer over the chair and find some walkie talkies. Finally! A means of communication out of here. You grab one and need to decide which channel to communicate with.\n\n",
+            "Choices": [
+                {
+                    "Text": "[ Channel 1 ]",
+                    "Target": "Static"
+                },
+                {
+                    "Text": "[ Channel 2 ]",
+                    "Target": "Static"
+                },
+                {
+                    "Text": "[ Channel 3 ]",
+                    "Target": "ManagerTalk"
+                },
+                {
+                    "Text": "[ Channel 4 ]",
+                    "Target": "Static"
+                },
+                {
+                    "Text": "[ Channel 5 ]",
+                    "Target": "Static"
+                },
+                {
+                    "Text": "[ Go to the dining area ]",
+                    "Target": "Dining"
+                }
+            ],
+            "Flag": false,
+            "Body2": "You finally found the walkies, what are you waiting for?",
+            "Body3": "You finally found a way out of here, what are you waiting for?",
+            "TrueKey": false
+        },
+        "Dish": {
+            "Body": "Everything looks nothing like you expected it to. For some reason you imagined the student workers having to wash everything by hand but they actually have a dish machine in there. You’ve heard that they have issues with it at times because of how hot it gets but at least it doesn’t look too bad.\n\n",
+            "Choices": [
+                {
+                    "Text": "[ Go to the kitchen ]",
+                    "Target": "Kitchen"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Dry Storage": {
+            "Body": "Rats. You were hoping to find it open and grab something to eat. You don’t remember why you passed out on the table, and even weirder why no one asked you to leave, but you know that some food wouldn’t hurt right now.\n\n",
+            "Choices": [
+                {
+                    "Text": "[ Go to the kitchen ]",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+        "Manager": {
+            "Body": "You rummage through drawers and search along the walls in the hopes of finding a key out of here. You find one that looks kind of important. Maybe you should go try it out.....but you realize that it doesnt.\n\n",
+            "Choices": [
+                {
+                    "Text": "[ Go to the kitchen ]",
+                    "Target": "Kitchen"
+                }
+            ],
+            "FakeKey": false
+        },
+        "Exit": {
+            "Body": "The way out, now it’s time to figure out how to escape without warning anybody about it.\n\n",
+            "Choices": [
+                {
+                    "Text": "[ Go to the dining area ]",
+                    "Target": "Dining"
+                }
+            ],
+            "Body2": "You try the first key that you found in the office, it doesn’t work. Maybe you should go check out the cashier area instead don’t you think? Who knows you might find something helpful there…",
+            "Body3": "Finally, the moment you’ve been waiting for. Are you ready? Click! You have successfully managed to escape and you get to go home and have a midnight snack. You deserve it for getting out of here :)"
+
+        },
+        "Static": {
+            "Body": "All you hear is static coming from the other end. Maybe we should try another channel instead?",
+            "Choices": [
+                {
+                    "Text": "[ Try a different walkie talkie ]",
+                    "Target": "Walkies"
+                }
+            ],
+            "Flag":false,
+            "Body2": "All you hear is static coming from the other end. Maybe we should try another channel instead?"
+        },
+        "ManagerTalk": {
+            "Body": "You hear a voice start coming through the other side. They start to lead you to the master key behind one of the desks up front. You finally have a means to escape.",
+            "Choices": [
+                {
+                    "Text": "[ Go to the dining area ]",
+                    "Target": "Dining"
+                }
+            ]
         }
     }
 }
